@@ -11,6 +11,7 @@ public class Main {
 		
 		DrawingSurface panel = new DrawingSurface();
 		window.add(panel);
+		window.add(new GameControls());
 		
 		window.setBackground(Color.BLACK);
 		window.setSize(500, 500);

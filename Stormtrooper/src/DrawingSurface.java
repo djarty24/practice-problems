@@ -23,6 +23,7 @@ public class DrawingSurface extends JPanel {
 		int height = getHeight();
 		
 		blaster.draw(drawBlaster, width, height);
+				
 	}
 	
 }
