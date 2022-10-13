@@ -1,18 +1,20 @@
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+//import java.awt.event.KeyEvent;
+//import java.awt.event.KeyListener;
 import javax.swing.JPanel;
+import processing.core.PApplet;
 
-public class Blaster extends JPanel implements KeyListener {
+public class Blaster extends JPanel{
 
 	// FIELDS
-
+    private Graphics2D drawBlaster2;
+    
 	// CONSTRUCTORS
 	public Blaster() {
 
-		this.addKeyListener(this);
-		this.setFocusable(true);
+		//this.addKeyListener(this);
+		//this.setFocusable(true);
 
 	}
 
@@ -29,42 +31,16 @@ public class Blaster extends JPanel implements KeyListener {
 		drawBlaster.fillRect(xBlasterBody, yBlasterBody, blasterStandSize, blasterStandSize);
 
 		// Draws the gun part of the blaster
-		drawBlaster.setColor(Color.PINK);
+		drawBlaster2.setColor(Color.PINK);
 		int blasterShooterWidth = 10;
 		int blasterShooterHeight = 20;
 		int xBlasterShooter = xCenter - blasterShooterWidth / 2;
 		int yBlasterShooter = yBlasterBody - blasterShooterHeight;
-		drawBlaster.fillRoundRect(xBlasterShooter, yBlasterShooter, blasterShooterWidth, blasterShooterHeight, 5, 5);
-
+		drawBlaster2.fillRoundRect(xBlasterShooter, yBlasterShooter, blasterShooterWidth, blasterShooterHeight, 5, 5);
 	}
 	
-	public void turn(int degrees) {
-		
-	}
-	
-	
-
-	@Override
-	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_A) {
-			System.out.println("Hello");
-		}
-		if (e.getKeyCode() == KeyEvent.VK_D ) {
-			System.out.println("Goodbye");
-		}
-
-	}
-
-	@Override
-	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-
+	public Graphics2D getDrawBlaster() {
+	    return drawBlaster2;
 	}
 
 }
