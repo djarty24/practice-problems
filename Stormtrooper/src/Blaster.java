@@ -21,6 +21,7 @@ public class Blaster extends JPanel{
 	// METHODS
 	public void draw(Graphics drawBlaster, int width, int height) {
 
+	    super.paintComponent(drawBlaster);
 		// Creates a 35x35 square for the blaster to stand on
 		drawBlaster.setColor(Color.WHITE);
 		int xCenter = width / 2;
@@ -31,6 +32,7 @@ public class Blaster extends JPanel{
 		drawBlaster.fillRect(xBlasterBody, yBlasterBody, blasterStandSize, blasterStandSize);
 
 		// Draws the gun part of the blaster
+		Graphics2D drawBlaster2 = (Graphics2D)drawBlaster;
 		drawBlaster2.setColor(Color.PINK);
 		int blasterShooterWidth = 10;
 		int blasterShooterHeight = 20;

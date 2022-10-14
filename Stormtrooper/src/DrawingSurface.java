@@ -18,7 +18,7 @@ public class DrawingSurface extends JPanel implements KeyListener{
 		blaster = new Blaster();
 		this.addKeyListener(this);
 		this.setFocusable(true);
-		this.drawBlaster2 = blaster.getDrawBlaster();
+		drawBlaster2 = blaster.getDrawBlaster();
 	}
 	
 	// METHODS
@@ -43,15 +43,17 @@ public class DrawingSurface extends JPanel implements KeyListener{
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             System.out.println("Hello");
-            if (drawBlaster2 == null) {
+            if (drawBlaster2 != null) {
                 drawBlaster2.rotate(Math.toRadians(-20));
+                repaint();
             }
         }
         
         if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             System.out.println("Goodbye");
-            if (drawBlaster2 == null) {
+            if (drawBlaster2 != null) {
                 drawBlaster2.rotate(Math.toRadians(20));
+                repaint();
             }
         }
 
