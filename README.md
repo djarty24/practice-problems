@@ -1,3 +1,3 @@
-# fbla-portfolio
-Has the files with my portfolio for FBLA tech competitions.
+# practice-problems
+pset solutions from Sedgewick course
 Programmer: Revati Tambe
